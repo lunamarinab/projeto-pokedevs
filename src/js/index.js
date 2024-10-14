@@ -4,7 +4,7 @@ const pokedevList = [{
 	type: "elétrico",
 	tag: "#001",
 	srcImage: "src/imagens/devchu.png",
-	description: "lero lero grande pakas bota fé?",
+	description: "Quando se depara com um erro no código, fica bastante irritado. Sente a tensão acumulada em cada músculo, como se estivesse prestes a soltar raios pelos dedos. Mas, em vez de se deixar abater, canaliza toda essa energia em busca da solução. Cada linha de código é examinada e ele não descansa até que o erro seja encontrado e corrigido.",
 	backgroundClass: "tipo-eletrico"
 },
 {
@@ -13,7 +13,7 @@ const pokedevList = [{
 	type: "fogo",
 	tag: "#003",
 	srcImage: "src/imagens/codevee.png",
-	description: "lero lero grande pakas bota fé?",
+	description: "Sua capacidade de evoluir continuamente permite que ele se adapte de forma eficaz a qualquer ambiente de desenvolvimento. Isso reflete a flexibilidade e a capacidade de aprendizado contínuo que são essenciais para um desenvolvedor pleno.",
 	backgroundClass: "tipo-fogo"
 },
 {
@@ -22,7 +22,7 @@ const pokedevList = [{
 	type: "água",
 	tag: "#022",
 	srcImage: "src/imagens/psycoder.png",
-	description: "lero lero grande pakas bota fé?",
+	description: "Um pokedev sênior constantemente atormentado por uma dor de cabeça persistente. Quando a dor se torna intensa demais,consegue acessar habilidades de programação extraordinárias, resolvendo problemas complexos com uma facilidade surpreendente.",
 	backgroundClass: "tipo-agua"
 }, {
 	id: "charmandev",
@@ -30,7 +30,7 @@ const pokedevList = [{
 	type: "fogo",
 	tag: "#015",
 	srcImage: "src/imagens/charmandev.png",
-	description: "lero lero grande pakas bota fé?",
+	description: "Este pokedev nunca deixa a chama do aprendizado se apagar! Está sempre se atualizando, pois sabe que um bom desenvolvedor deve ser resiliente e adaptável às mudanças constantes no mundo da tecnologia. Estar aberto a aprender novas ferramentas e metodologias é crucial.",
 	backgroundClass: "tipo-fogo"
 },
 {
@@ -39,7 +39,7 @@ const pokedevList = [{
 	type: "água",
 	tag: "#002",
 	srcImage: "src/imagens/scriptle.png",
-	description: "lero lero grande pakas bota fé?",
+	description: "Mesmo sendo um programador iniciante, este pokedev já domina habilidades fundamentais em Javascript como: Depurar o código, Manipulação do DOM, Trabalhar com APIs, Conhecimento de frameworks e bibliotecas tornando o código mais eficiente.",
 	backgroundClass: "tipo-agua"
 },
 {
@@ -48,7 +48,7 @@ const pokedevList = [{
 	type: "fada",
 	tag: "#062",
 	srcImage: "src/imagens/devlypuff.png",
-	description: "lero lero grande pakas bota fé?",
+	description: "A expressão “trabalhe enquanto eles dormem” poderia ter sido facilmente criada por este pokedev. Afinal, ele tem o dom de codar por horas e horas, madrugada adentro, regado a muito café e energéticos. Sua dedicação é tão intensa que, enquanto a maioria das pessoas está descansando, ele está imerso em linhas de código, resolvendo problemas e criando soluções.",
 	backgroundClass: "tipo-fada"
 }
 ]
@@ -65,8 +65,6 @@ listaSelecaoPokedevs.forEach(pokedev => {
 		cartaoPokedev.classList.remove('tipo-fogo')
 		cartaoPokedev.classList.remove('tipo-eletrico')
 
-		//pokedev.attributes.id.value = 'codevee'
-		console.log("pokedev.attributes.id.value", pokedev.attributes.id.value)
 		const selectedPokedev = pokedevList.find(item => item.id === pokedev.attributes.id.value)
 
 		cartaoPokedev.classList.add(selectedPokedev.backgroundClass)
@@ -77,39 +75,24 @@ listaSelecaoPokedevs.forEach(pokedev => {
 		const pokedevType = document.getElementById("pokedevType")
 		pokedevType.textContent = selectedPokedev.type
 
-		console.log("selectedPokedev", selectedPokedev)
+		const pokedevTag = document.getElementById("pokedevTag")
+		pokedevTag.textContent = selectedPokedev.tag
 
+		const pokedevImg = document.getElementById("pokedevImg")
+		pokedevImg.src = selectedPokedev.srcImage
+		pokedevImg.alt = selectedPokedev.name
 
+		const pokedevDescription = document.getElementById("pokedevDescription")
+		pokedevDescription.textContent = selectedPokedev.description
 
-		// esconderCartaoPokedev();
+		desativarPokedevNaListagem();
 
-		// const idPokedevSelecionado = mostrarCartaoPokedev(pokedev);
-
-		// desativarPokedevNaListagem();
-
-		// const pokedevSelecionadoNaListagem = document.getElementById(idPokedevSelecionado);
-		// pokedevSelecionadoNaListagem.classList.add("ativo");
+		pokedev.classList.add("ativo");
 	})
 })
 
-function desativarPokedevNaListagem() {
-	ativarPokedevNaListagem();
-}
 
-function ativarPokedevNaListagem() {
+function desativarPokedevNaListagem() {
 	const pokedevAtivoNaListagem = document.querySelector(".ativo");
 	pokedevAtivoNaListagem.classList.remove("ativo");
 }
-
-function mostrarCartaoPokedev(pokedev) {
-	const idPokedevSelecionado = pokedev.attributes.id.value;
-	const idDoCartaoPokedevParaAbrir = "cartao-" + idPokedevSelecionado;
-	const cartaoPokedevParaAbrir = document.getElementById(idDoCartaoPokedevParaAbrir);
-	cartaoPokedevParaAbrir.classList.add("aberto");
-	return idPokedevSelecionado;
-}
-
-// function esconderCartaoPokedev() {
-//     const cartaoPokedevAberto = document.querySelector(".aberto");
-//     cartaoPokedevAberto.classList.remove("aberto");
-// }
