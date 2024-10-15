@@ -1,4 +1,4 @@
-@media(max-width: 750px){
+@media(max-width: 750px) {
 
     .pokedevs {
         flex-direction: column;
@@ -6,24 +6,24 @@
         padding: 30px 0;
     }
 
-    .cartao-pokedev{
+    .cartao-pokedev {
         max-width: 300px;
     }
 
-    .cartao-pokedev .cartao-informacoes{
+    .pokedev-card .card-info {
         padding: 60px 30px 30px;
         margin-top: -50px;
     }
 
-    .cartao-pokedev .cartao-informacoes h3{
+    .pokedev-card .card-info h3 {
         font-size: 16px;
     }
 
-    .listagem{
+    .list {
         max-width: 360px;
     }
 
-    .listagem .cartao-pokedev{
+    .list .pokedev-card {
         width: 45%;
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
@@ -31,7 +31,7 @@
         border-radius: 8px;
     }
 
-    .listagem ul{
+    .list ul {
         display: flex;
         justify-content: center;
         flex-wrap: wrap;

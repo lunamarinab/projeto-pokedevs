@@ -30,33 +30,28 @@ main {
     padding: 30px 0;
 }
 
-.cartao-pokedev {
-    display: none;
+.pokedev-card {
     max-width: 360px;
     border-radius: 10px;
 
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
-.cartao-pokedev.aberto {
-    display: block;
-}
-
-.cartao-pokedev img {
+.pokedev-card img {
     width: 100%;
     height: 100%;
     margin-top: 10px;
 }
 
-.cartao-pokedev .cartao-topo {
+.pokedev-card .top-card {
     padding: 30px 40px 0;
 }
 
-.cartao-pokedev .nome {
+.pokedev-card .name {
     margin-bottom: 5px;
 }
 
-.cartao-pokedev .tipo {
+.pokedev-card .type {
     background-color: #ffffff;
     font-size: 12px;
     opacity: 0.7;
@@ -64,14 +59,14 @@ main {
     padding: 2px 10px;
 }
 
-.cartao-pokedev .detalhes {
+.pokedev-card .details {
     color: #ffffff;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.cartao-pokedev .cartao-informacoes {
+.pokedev-card .card-info {
     background-color: #ffffff;
     display: flex;
     justify-content: space-between;
@@ -81,52 +76,52 @@ main {
     border-bottom-right-radius: 8px;
 }
 
-.cartao-pokedev .cartao-informacoes {
+.pokedev-card .card-info {
     font-size: 20px;
     margin-bottom: 15px;
     border-bottom: 1px solid #6b727a;
 }
 
-.cartao-pokedev .cartao-informacoes .descricao {
+.pokedev-card .card-info .description {
     padding: 0 10px;
     font-size: 15px;
     max-height: 150px;
     overflow-y: scroll;
 }
 
-.tipo-eletrico {
+.type-electric {
     background-color: #fcc719;
 }
 
-.tipo-fogo {
+.type-fire {
     background-color: #f15000d2;
 }
 
-.tipo-agua {
+.type-water {
     background-color: #015C98;
 }
 
-.tipo-grama {
+.type-grass {
     background-color: #49D0B0;
 }
 
-.tipo-trevas {
+.type-darkness {
     background-color: #BA68C8;
 }
 
-.tipo-fada {
+.type-fairy {
     background-color: #C29791;
 }
 
-.listagem {
+.list {
     max-width: 200px;
 }
 
-.listagem .pokedev img {
+.list .pokedev img {
     width: 25%;
 }
 
-.listagem .pokedev {
+.list .pokedev {
     background-color: #6b727a;
     color: #ffffff;
 
@@ -143,14 +138,14 @@ main {
     transition: 0.15 ease-in-out;
 }
 
-.listagem .pokedev:hover {
+.list .pokedev:hover {
     transform: scale(1.05);
 }
 
-.listagem .pokedev span {
+.list .pokedev span {
     padding-right: 20px;
 }
 
-.listagem .pokedev.ativo {
+.list .pokedev.active {
     background-color: #fa6668;
 }
